@@ -1,15 +1,16 @@
 {
-  "name": "reflect-dreamrunner",
+  "name": "reflect-dreamrunner-2",
   "version": "1.0.0",
-  "description": "Reflect DreamRunner 2.0 - AI Emotions Server",
+  "description": "Reflect DreamRunner 2.0 — AI Emotions Server",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "axios": "^1.5.0",
-    "dotenv": "^16.3.1"
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
   }
 }
+
 
