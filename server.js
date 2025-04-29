@@ -47,6 +47,11 @@ app.post('/receive-emotion', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('DreamRunner is alive!');
+});
+
 app.listen(PORT, () => console.log(`Reflect DreamRunner 2.0 server running on port ${PORT}`));
 
 
