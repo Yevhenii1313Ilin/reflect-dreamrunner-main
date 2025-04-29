@@ -47,6 +47,27 @@ app.post('/receive-emotion', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('DreamRunner is alive!');
+});
+
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+app.use(express.json()); // Обязательно, чтобы принимать JSON!
+
+app.post('/reflect', (req, res) => {
+  const { text } = req.body;
+
+  if (!text) {
+    return res.status(400).json({ error: 'No text provided.' });
+  }
+
+  // Здесь пока просто заглушка (можно позже заменить на реальную обработку через OpenAI)
+  res.json({ message: `Отражение текста: ${text}` });
+});
+
 app.listen(PORT, () => console.log(`Reflect DreamRunner 2.0 server running on port ${PORT}`));
 
 
