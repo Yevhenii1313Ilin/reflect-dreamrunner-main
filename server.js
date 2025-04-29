@@ -52,6 +52,10 @@ app.get('/', (req, res) => {
   res.send('DreamRunner is alive!');
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 app.listen(PORT, () => console.log(`Reflect DreamRunner 2.0 server running on port ${PORT}`));
 
 
